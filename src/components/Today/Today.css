@@ -1,0 +1,15 @@
+.Today {
+  display: flex;
+  justify-content: space-evenly;
+  width: 86%;
+  margin-left: 8%;
+  margin-right: 8%;
+  color: #ff9b71;
+}
+
+.Today div {
+  padding-left: 2em;
+  padding-bottom: 1em;
+  flex: 1;
+  min-width: 60px;
+}

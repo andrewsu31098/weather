@@ -1,0 +1,51 @@
+.Day {
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-top: 4px solid rgba(255, 255, 255, 0);
+  flex: 1;
+  padding-left: 2em;
+  transition: border-top 0.5s;
+}
+
+.Day:hover {
+  border-top-style: inset;
+  border-top: 4px solid rgb(255, 255, 255);
+  border-bottom: 2px solid gray;
+  border-left: 2px solid gray;
+  border-right: 2px solid gray;
+}
+
+#day-name {
+  color: white;
+  margin-bottom: 0;
+}
+
+#date {
+  color: gray;
+  margin-top: 0;
+  font-size: 0.8em;
+}
+
+#weather-high {
+  color: white;
+  margin-bottom: 0;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
+
+#weather-low {
+  color: white;
+  margin-top: 0;
+  white-space: nowrap;
+  font-size: 0.8em;
+}
+
+#description {
+  margin-top: 0;
+  color: gray;
+  font-size: 0.8em;
+}
+
+#icon {
+  font-size: 3em;
+  color: blue;
+}

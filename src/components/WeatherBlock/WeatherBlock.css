@@ -1,0 +1,6 @@
+.WeatherBlock {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  min-height: 95vh;
+}
