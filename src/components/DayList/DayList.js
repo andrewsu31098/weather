@@ -4,13 +4,13 @@ import Day from "../Day/Day";
 function DayList(props) {
   return (
     <div className="DayList">
-      <Day day1 />
-      <Day day2 />
-      <Day day3 />
-      <Day day4 />
-      <Day day5 />
-      <Day day6 />
-      <Day day7 />
+      <Day day="0" onHover={props.onHover} />
+      <Day day="1" onHover={props.onHover} />
+      <Day day="2" onHover={props.onHover} />
+      <Day day="3" onHover={props.onHover} />
+      <Day day="4" onHover={props.onHover} />
+      <Day day="5" onHover={props.onHover} />
+      <Day day="6" onHover={props.onHover} />
     </div>
   );
 }

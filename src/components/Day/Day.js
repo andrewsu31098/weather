@@ -9,8 +9,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Day(props) {
+  const day = props.day;
   return (
-    <div className={props.day1 ? "Day day1" : "Day"}>
+    <div
+      data-value={day}
+      onMouseEnter={(e) => {
+        props.onHover(day);
+      }}
+      className="Day"
+    >
       <p id="day-name">SUNDAY</p>
       <p id="date">01/16/22</p>
       <p id="weather-high">High: 76°F</p>
