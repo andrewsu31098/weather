@@ -4,6 +4,7 @@
   width: 86%;
   margin-left: 8%;
   margin-right: 8%;
+  min-width: 600px;
   color: #ff9b71;
 }
 
@@ -11,7 +12,8 @@
   padding-left: 2em;
   padding-bottom: 1em;
   flex: 1;
-  min-width: 60px;
+  min-width: 64px;
+  white-space: nowrap;
 }
 
 .example-enter {

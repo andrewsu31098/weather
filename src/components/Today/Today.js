@@ -36,30 +36,14 @@ function Today(props) {
         in={props.hoveredDay == day}
         timeout={500}
         classNames="example"
+        key={i}
       >
-        <div key={i}>{props.hoveredDay == day ? relativeDay(day) : null}</div>
+        <div>{props.hoveredDay == day ? relativeDay(day) : null}</div>
       </CSSTransition>
     );
   });
 
-  return (
-    <div className="Today">
-      {/* <CSSTransition
-        in={props.hoveredDay == "0"}
-        timeout={500}
-        classNames="example"
-      >
-        <div>{props.hoveredDay == "0" ? relativeDay("0") : null}</div>
-      </CSSTransition>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div> */}
-      {items}
-    </div>
-  );
+  return <div className="Today">{items}</div>;
 }
 
 export default Today;

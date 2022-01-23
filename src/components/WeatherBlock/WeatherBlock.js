@@ -10,16 +10,14 @@ function WeatherBlock(props) {
   const [hoveredDay, setHoveredDay] = useState("0");
 
   const onDayHover = (day) => {
-    console.log(day);
-
     setHoveredDay(day);
   };
 
   return (
     <div className="WeatherBlock">
       <div className="wb-spacer"></div>
-      <Today hoveredDay={hoveredDay} />
       <HeaderList />
+      <Today hoveredDay={hoveredDay} />
       <DayBar />
       <DayList onHover={onDayHover} />
     </div>

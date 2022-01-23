@@ -3,7 +3,8 @@
   border-top: 4px solid rgba(255, 255, 255, 0);
   flex: 1;
   padding-left: 2em;
-  transition: border-top 0.5s;
+  padding-top: 0.5em;
+  transition: border-top 0.5s, padding-top 0.5s;
 }
 
 .Day:hover {
@@ -12,17 +13,20 @@
   border-bottom: 2px solid gray;
   border-left: 2px solid gray;
   border-right: 2px solid gray;
+  padding-top: 0em;
 }
 
 #day-name {
   color: white;
   margin-bottom: 0;
+  transition: font-size 0.5s;
 }
 
 #date {
   color: gray;
   margin-top: 0;
   font-size: 0.8em;
+  transition: font-size 0.5s;
 }
 
 #weather-high {
@@ -30,6 +34,7 @@
   margin-bottom: 0;
   white-space: nowrap;
   font-size: 0.8em;
+  transition: font-size 0.5s;
 }
 
 #weather-low {
@@ -37,12 +42,14 @@
   margin-top: 0;
   white-space: nowrap;
   font-size: 0.8em;
+  transition: font-size 0.5s;
 }
 
 #description {
   margin-top: 0;
   color: gray;
   font-size: 0.8em;
+  transition: font-size 0.5s;
 }
 
 #icon {

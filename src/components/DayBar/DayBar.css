@@ -3,6 +3,7 @@
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  min-width: 650px;
 }
 
 /* Need the bar to grow to fill entire width. Flex-grow is 0 normally*/

@@ -14,7 +14,7 @@ function Day(props) {
     <div
       data-value={day}
       onMouseEnter={(e) => {
-        props.onHover(day);
+        props.onHover(day, e);
       }}
       className="Day"
     >
