@@ -1,23 +1,26 @@
 .HeaderList {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   height: 30%;
   width: 82%;
   margin-left: 6%;
   margin-right: 12%;
   margin-bottom: 4em;
   min-width: 600px;
+  min-height: 173px;
 }
 
 .HeaderList .H-Spacer {
+  padding-top: 20px;
   min-width: 300px;
+  flex-grow: 1;
 }
 
 .H-Today {
   min-width: 200px;
   padding-top: 20px;
   transition: padding-top 0.5s, border-bottom 0.5s;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 .H-Today:hover {
   padding-top: 0px;

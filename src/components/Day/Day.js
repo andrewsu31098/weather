@@ -23,10 +23,10 @@ function Day(props) {
       <p id="weather-high">High: 76°F</p>
       <p id="weather-low">Low: 60°F</p>
       <div id="icon">
-        <FontAwesomeIcon icon={faSnowflake} />
+        <FontAwesomeIcon icon={faSun} />
       </div>
 
-      <p id="description">Cloudy</p>
+      <p id="description">Sunny</p>
     </div>
   );
 }

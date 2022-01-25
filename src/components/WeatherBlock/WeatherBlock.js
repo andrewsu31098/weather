@@ -1,7 +1,8 @@
 import "./WeatherBlock.css";
 
-import Today from "../Today/Today";
+import LocationList from "../LocationList/LocationList";
 import HeaderList from "../HeaderList/HeaderList.js";
+import Today from "../Today/Today";
 import DayBar from "../DayBar/DayBar.js";
 import DayList from "../DayList/DayList.js";
 import { useState } from "react";
@@ -16,6 +17,7 @@ function WeatherBlock(props) {
   return (
     <div className="WeatherBlock">
       <div className="wb-spacer"></div>
+      <LocationList />
       <HeaderList />
       <Today hoveredDay={hoveredDay} />
       <DayBar />

@@ -1,0 +1,25 @@
+#navvy {
+  display: flex;
+  justify-content: flex-start;
+  width: 82%;
+  margin-left: 6%;
+  margin-right: 12%;
+  min-width: 600px;
+}
+
+#navvy-title {
+  font-weight: 800;
+}
+
+.navvy-links {
+  color: #95a3b3 !important;
+  white-space: nowrap;
+}
+
+.navvy-links:nth-child(3) {
+}
+
+#navvy-search {
+  margin-left: auto;
+  min-width: 420px;
+}

@@ -1,0 +1,20 @@
+.LocationList {
+  display: flex;
+  justify-content: flex-start;
+  width: 82%;
+  margin-left: 6%;
+  margin-right: 12%;
+  min-width: 600px;
+}
+
+#L-location-name {
+  color: #fff689;
+  min-width: 420px;
+  font-size: 60px;
+  font-weight: 200;
+}
+
+.L-Spacer {
+  min-width: 300px;
+  flex-grow: 1;
+}
