@@ -20,7 +20,8 @@ exports.lambdaHandler = async (event, context) => {
     response = {
       statusCode: 200,
       body: JSON.stringify({
-        message: "hello world this is andrews function",
+        message:
+          "hello world this is andrews function testing my lambda hiding.",
         // location: ret.data.trim()
       }),
     };
