@@ -4,7 +4,7 @@ import WeatherBlock from "./components/WeatherBlock/WeatherBlock.js";
 
 function App() {
   return (
-    <div>
+    <div id="weather">
       <Navvy />
       <WeatherBlock />
     </div>
