@@ -12,8 +12,10 @@
 
 .HeaderList .H-Spacer {
   padding-top: 20px;
-  min-width: 300px;
+  /* min-width: 300px; */
+  width: 300px;
   flex-grow: 1;
+  flex-shrink: 0.7;
 }
 
 .H-Today {
