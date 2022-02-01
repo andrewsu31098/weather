@@ -2,9 +2,20 @@ const axios = require("axios");
 
 exports.handler = async (event) => {
   // TODO implement
-  const weatherData = await axios(
-    "https://api.openweathermap.org/data/2.5/onecall?lat=51.509865&lon=-0.118092&exclude=minutely,hourly,alerts,daily&appid=676728a638b5368dca365235de652f0c&units=imperial"
+  const currentWeatherCall = await axios(
+    "https://api.openweathermap.org/data/2.5/weather?q=LONDON&appid=676728a638b5368dca365235de652f0c"
   );
+  const cityLat = currentWeatherCall.data.coord.lat;
+  const cityLon = currentWeatherCall.data.coord.lon;
+
+  const oneWeatherCall = await axios(
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat}&lon=${cityLon}&exclude=minutely,hourly,alerts&appid=676728a638b5368dca365235de652f0c&units=imperial`
+  );
+
+  let finishedCallJSON = oneWeatherCall.data;
+  finishedCallJSON["name"] = currentWeatherCall.data.name;
+  finishedCallJSON["country"] = currentWeatherCall.data.sys.country;
+
   const response = {
     statusCode: 200,
     //  Uncomment below to enable CORS requests
@@ -12,7 +23,7 @@ exports.handler = async (event) => {
     //      "Access-Control-Allow-Origin": "*",
     //      "Access-Control-Allow-Headers": "*"
     //  },
-    body: JSON.stringify(weatherData.data),
+    body: JSON.stringify(finishedCallJSON),
   };
   return response;
 };
