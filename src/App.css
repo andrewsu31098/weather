@@ -3,12 +3,26 @@
 }
 
 body {
-  background-image: url("./assets/m-rainy-1.png");
+  background-image: url("./assets/m-cloudy-1.png");
   background-size: 100vw 100vh;
   background-repeat: round;
   min-height: 100vh;
 }
-
-#weather {
-  /* overflow: auto; */
+.Thunderstorm {
+  background-image: url("./assets/m-rainy-1.png");
+}
+.Drizzle {
+  background-image: url("./assets/m-rainy-1.png");
+}
+.Rain {
+  background-image: url("./assets/m-rainy-1.png");
+}
+.Snow {
+  background-image: url("./assets/m-snowy-1.png");
+}
+.Clear {
+  background-image: url("./assets/m-sunny-1.png");
+}
+.Clouds {
+  background-image: url("./assets/m-cloudy-1.png");
 }

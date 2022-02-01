@@ -1,16 +1,23 @@
 import "./DayList.css";
 import Day from "../Day/Day";
 
+let items = ["1", "2", "3", "4", "5", "6"];
+
 function DayList(props) {
+  let itemList = items.map((item, index) => {
+    return (
+      <Day
+        key={index}
+        day={item}
+        weatherDay={props.daily[index]}
+        onHover={props.onHover}
+      />
+    );
+  });
   return (
     <div className="DayList">
-      <Day day="0" onHover={props.onHover} />
-      <Day day="1" onHover={props.onHover} />
-      <Day day="2" onHover={props.onHover} />
-      <Day day="3" onHover={props.onHover} />
-      <Day day="4" onHover={props.onHover} />
-      <Day day="5" onHover={props.onHover} />
-      <Day day="6" onHover={props.onHover} />
+      <Day day="0" weatherDay={props.current} onHover={props.onHover} />
+      {itemList}
     </div>
   );
 }
