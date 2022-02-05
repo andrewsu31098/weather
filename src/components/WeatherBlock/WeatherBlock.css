@@ -2,9 +2,5 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
-  min-height: 90vh;
-}
-
-#test {
-  color: white;
+  min-height: 95vh;
 }

@@ -5,7 +5,6 @@
   margin-left: 6%;
   margin-right: 12%;
   min-width: 600px;
-  flex-wrap: wrap;
 }
 
 #navvy-title {
@@ -20,18 +19,4 @@
 #navvy-search {
   margin-left: auto;
   min-width: 420px;
-}
-
-@media (max-width: 1200px) {
-  #navvy-search {
-    width: auto;
-    min-width: 0px;
-  }
-}
-
-@media (max-width: 996px) {
-  #navvy-search {
-    margin-left: 0;
-    padding-top: 10px;
-  }
 }
