@@ -9,38 +9,59 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function HeaderList(props) {
+  var date = new Date(0);
+  date.setUTCSeconds(props.current.dt);
+
   return (
     <div className="HeaderList">
       <div className="H-Spacer"></div>
 
       <div className="H-Today">
-        <span className="h-day">Sunday </span>
-        <span className="h-day">16 January </span> <br></br>
-        <p id="h-temperature">+76°F</p>
-        <p id="h-description">Feels like 78°F</p>
-        <p id="h-description-2">Slightly humid. Expect clouds later</p>
+        <span className="h-day">
+          {date.toLocaleString("default", {
+            weekday: "long",
+            timeZone: "America/Los_Angeles",
+          })}
+        </span>
+        <span className="h-day"> {date.getDate()} </span>
+        <span className="h-day">
+          {date.toLocaleString("default", {
+            month: "long",
+            timeZone: "America/Los_Angeles",
+          })}
+        </span>{" "}
+        <br></br>
+        <p id="h-temperature">+{parseInt(props.current.temp)}°F</p>
+        <p id="h-description">
+          Feels like {parseInt(props.current.feels_like)}°F
+        </p>
+        <p id="h-description-2">
+          {" "}
+          {props.current.weather[0].main}. Expect{" "}
+          {props.current.weather[0].description}.
+        </p>
       </div>
 
       <div className="H-Details">
         <p id="h-detail-header">More Details:</p>
         <span className="h-label">Wind speed: </span>
         <span id="h-wind" className="h-detail">
-          1-8 m/s.
+          {props.current.wind_speed} mph.
         </span>{" "}
         <br></br>
         <span className="h-label">Air Humidity: </span>
         <span id="h-wind" className="h-detail">
-          42-76%
+          {props.current.humidity}%
+        </span>{" "}
+        <br></br>
+        <span className="h-label">Cloud coverage: </span>
+        <span id="h-wind" className="h-detail">
+          {props.current.clouds}%
         </span>{" "}
         <br></br>
         <span className="h-label">Pressure: </span>
         <span id="h-wind" className="h-detail">
-          747-749 mm
-        </span>{" "}
-        <br></br>
-        <span className="h-label">Precipitation probability: </span>
-        <span id="h-wind" className="h-detail">
-          2%
+          {props.current.pressure} hPa
         </span>{" "}
         <br></br>
       </div>
