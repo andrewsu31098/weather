@@ -1,25 +1,14 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        "weatherFunction": {
+        "weatherLambda": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
             "LambdaExecutionRole": "string"
         }
     },
-    "auth": {
-        "weather": {
-            "IdentityPoolId": "string",
-            "IdentityPoolName": "string",
-            "UserPoolId": "string",
-            "UserPoolArn": "string",
-            "UserPoolName": "string",
-            "AppClientIDWeb": "string",
-            "AppClientID": "string"
-        }
-    },
     "api": {
-        "ampWeatherApi": {
+        "weatherApi": {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"

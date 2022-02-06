@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "weatherFunction",
+            "weatherLambda",
             {
               "Fn::Join": [
                 "",
                 [
-                  "weatherFunction",
+                  "weatherLambda",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "weatherLambdaRole193617f5",
+            "weatherLambdaRole418ce616",
             {
               "Fn::Join": [
                 "",
                 [
-                  "weatherLambdaRole193617f5",
+                  "weatherLambdaRole418ce616",
                   "-",
                   {
                     "Ref": "env"
