@@ -23,14 +23,13 @@
 }
 
 @media (max-width: 1200px) {
-  #navvy-search {
-    width: auto;
-    min-width: 0px;
+  #navvy-auto-searchbar {
+    min-width: 275px;
   }
 }
 
 @media (max-width: 996px) {
-  #navvy-search {
+  #navvy-auto-searchbar {
     margin-left: 0;
     padding-top: 10px;
   }

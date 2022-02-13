@@ -31,13 +31,12 @@ function App() {
   }
 
   useEffect(() => {
-    callApi();
+    findNewWeather();
   }, []);
 
   return (
     <div id="weather">
       <Navvy />
-      <button onClick={findNewWeather}></button>
       <WeatherBlock weatherState={weatherState} />
     </div>
   );
