@@ -1,7 +1,39 @@
 import * as ReactBootStrap from "react-bootstrap";
 import "./Nav.css";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import { useState, useEffect } from "react";
+import { type } from "@testing-library/user-event/dist/type";
 
 function Navvy(props) {
+  const [cityJSON, setCityJSON] = useState([]);
+
+  useEffect(() => {
+    fetch("./cities.json")
+      .then((r) => r.text())
+      .then((text) => {
+        return JSON.parse(text);
+      })
+      .then((jString) => {
+        const map1 = jString.map((city) => {
+          city["key"] = city.rank;
+          return city;
+        });
+        return map1;
+      })
+      .then((keyedJString) => {
+        setCityJSON(keyedJString.slice(0, 50));
+      });
+  }, []);
+
+  function onButtClick(event) {
+    console.log("type: ", typeof cityJSON);
+    // console.log("first 5");
+    // for (let i = 0; i < 5; i++) {
+    //   console.log(cityJSON[i]);
+    // }
+    console.log(cityJSON);
+  }
+
   return (
     <ReactBootStrap.Navbar>
       <ReactBootStrap.Container id="navvy">
@@ -18,17 +50,15 @@ function Navvy(props) {
         <ReactBootStrap.Nav.Link href="#home" className="navvy-links">
           MY-GITHUB
         </ReactBootStrap.Nav.Link>
-        <ReactBootStrap.Form className="d-flex" id="navvy-search">
-          <ReactBootStrap.FormControl
-            type="search"
+        <div id="navvy-auto-searchbar">
+          <ReactSearchAutocomplete
+            items={cityJSON}
+            fuseOptions={{ keys: ["city"] }}
+            resultStringKeyName="city"
+            autoFocus
             placeholder="Search City"
-            className="me-2"
-            aria-label="Search"
           />
-          <ReactBootStrap.Button variant="outline-success">
-            Search
-          </ReactBootStrap.Button>
-        </ReactBootStrap.Form>
+        </div>
       </ReactBootStrap.Container>
     </ReactBootStrap.Navbar>
   );

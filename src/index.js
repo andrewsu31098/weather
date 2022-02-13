@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "mdbreact/dist/css/mdb.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";

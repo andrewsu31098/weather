@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Navvy from "./components/Navbar/Nav";
 import WeatherBlock from "./components/WeatherBlock/WeatherBlock.js";
 
-import { API } from "aws-amplify";
+import { API, JS } from "aws-amplify";
 
 const londonDefault = require("./assets/newyork.json");
 
@@ -12,6 +12,8 @@ function App() {
   const [weatherState, setWeatherState] = useState(londonDefault);
 
   useEffect(() => {
+    console.log("First body class: ", document.body.classList[0]);
+    document.body.classList.remove(document.body.classList[0]);
     document.body.classList.add(weatherState.current.weather[0].main);
   });
 
@@ -26,7 +28,6 @@ function App() {
   async function findNewWeather() {
     const weatherData = await API.get("weatherApi", "/weather?city=Sacramento");
     setWeatherState(weatherData);
-    console.log("type: ", typeof weatherData);
   }
 
   useEffect(() => {
