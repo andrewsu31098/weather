@@ -6,8 +6,13 @@
 ## Search Autocomplete Prediction.
 - The Searchbar will predict and offer suggestions of the largest and most commonly searched for cities.
 
+<br> <br/>
+<img style="height:200px;" src="./src/assets/ex4.PNG" /> 
+<br> <br/>
+
 ## Changing Background Image.
 - The background image changes to match the current weather in whichever city is being observed.
+
 <br> <br/>
 <img style="height:200px;" src="./src/assets/ex1.PNG" /> 
 <img style="height:200px;" src="./src/assets/ex2.PNG" />
