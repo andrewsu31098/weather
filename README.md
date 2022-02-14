@@ -9,9 +9,9 @@
 ## Changing Background Image.
 - The background image changes to match the current weather in whichever city is being observed.
 <br> <br/>
-<img style="height:100px;" src="./src/assets/ex1.PNG" /> 
-<img style="height:100px;" src="./src/assets/ex2.PNG" />
-<img style="height:100px;" src="./src/assets/ex3.PNG" />
+<img style="height:200px;" src="./src/assets/ex1.PNG" /> 
+<img style="height:200px;" src="./src/assets/ex2.PNG" />
+<img style="height:200px;" src="./src/assets/ex3.PNG" />
 <br> <br/> 
 
 ## Responsive UI
