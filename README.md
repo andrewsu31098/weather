@@ -7,7 +7,7 @@
 
 
 ## Changing Background Image.
-![Alt text](/weather/src/assets/ex1.png?raw=true "Title")
+![Alt text](/weather/src/assets/ex1.PNG?raw=true "Title")
 ## Responsive UI
 
 ## Reactive UI
