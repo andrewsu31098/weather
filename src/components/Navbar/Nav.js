@@ -49,10 +49,16 @@ function Navvy(props) {
         >
           MINIMAL WEATHER
         </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Nav.Link href="#home" className="navvy-links">
+        <ReactBootStrap.Nav.Link
+          href="https://github.com/andrewsu31098/weather/blob/master/README.md"
+          className="navvy-links"
+        >
           WEBSITE-FEATURES
         </ReactBootStrap.Nav.Link>
-        <ReactBootStrap.Nav.Link href="#home" className="navvy-links">
+        <ReactBootStrap.Nav.Link
+          href="https://github.com/andrewsu31098"
+          className="navvy-links"
+        >
           MY-GITHUB
         </ReactBootStrap.Nav.Link>
         <div id="navvy-auto-searchbar">
