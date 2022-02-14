@@ -8,7 +8,7 @@
 
 ## Changing Background Image.
 - The background image changes to match the current weather in whichever city is being observed.
-![Alt text](/weather/src/assets/ex1.PNG?raw=true "Title")
+<img src="./src/assets/ex1.PNG">
 ## Responsive UI
 - The website will adjust and resize based on how large the browser window is.
 - Mobile version of the website currently not available.
