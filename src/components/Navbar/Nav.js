@@ -6,6 +6,7 @@ import { type } from "@testing-library/user-event/dist/type";
 
 function Navvy(props) {
   const [cityJSON, setCityJSON] = useState([]);
+  const [searchCity, setSearchCity] = useState("");
 
   useEffect(() => {
     fetch("./cities.json")
@@ -25,13 +26,17 @@ function Navvy(props) {
       });
   }, []);
 
-  function onButtClick(event) {
-    console.log("type: ", typeof cityJSON);
-    // console.log("first 5");
-    // for (let i = 0; i < 5; i++) {
-    //   console.log(cityJSON[i]);
-    // }
-    console.log(cityJSON);
+  function onSearchChange(string, results) {
+    setSearchCity(string);
+  }
+
+  function onSearchSelect(item) {
+    setSearchCity(item.city);
+  }
+
+  function onSubmitCity(e) {
+    e.preventDefault();
+    props.onCitySearch(searchCity);
   }
 
   return (
@@ -51,13 +56,17 @@ function Navvy(props) {
           MY-GITHUB
         </ReactBootStrap.Nav.Link>
         <div id="navvy-auto-searchbar">
-          <ReactSearchAutocomplete
-            items={cityJSON}
-            fuseOptions={{ keys: ["city"] }}
-            resultStringKeyName="city"
-            autoFocus
-            placeholder="Search City"
-          />
+          <form onSubmit={onSubmitCity}>
+            <ReactSearchAutocomplete
+              onSearch={onSearchChange}
+              onSelect={onSearchSelect}
+              items={cityJSON}
+              fuseOptions={{ keys: ["city"] }}
+              resultStringKeyName="city"
+              autoFocus
+              placeholder="Search City"
+            />
+          </form>
         </div>
       </ReactBootStrap.Container>
     </ReactBootStrap.Navbar>

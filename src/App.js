@@ -17,16 +17,13 @@ function App() {
     document.body.classList.add(weatherState.current.weather[0].main);
   });
 
-  async function callApi() {
-    try {
-      const peopleData = await API.get("weatherApi", "/weather");
-      console.log("peopledata: ", peopleData);
-    } catch (err) {
-      console.log("error: ", err);
-    }
-  }
   async function findNewWeather() {
-    const weatherData = await API.get("weatherApi", "/weather?city=Sacramento");
+    const weatherData = await API.get("weatherApi", "/weather?city=New York");
+    setWeatherState(weatherData);
+  }
+
+  async function onCitySearch(city) {
+    const weatherData = await API.get("weatherApi", `/weather?city=${city}`);
     setWeatherState(weatherData);
   }
 
@@ -36,7 +33,7 @@ function App() {
 
   return (
     <div id="weather">
-      <Navvy />
+      <Navvy onCitySearch={onCitySearch} />
       <WeatherBlock weatherState={weatherState} />
     </div>
   );
