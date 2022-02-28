@@ -18,7 +18,7 @@
 <br> <br/>
 
 ## Realtime API calls to OpenWeatherApi.
-- Website provides a simple and easy way to get a weekly forecast on any city in the world supported by the OpenWeatherApi.
+- Website provides simple way to get weather data on any city supported by OpenWeatherApi.
 
 ## Responsive UI
 - The website will adjust and resize based on how large the browser window is.
