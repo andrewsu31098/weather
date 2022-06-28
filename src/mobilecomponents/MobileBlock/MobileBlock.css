@@ -1,0 +1,37 @@
+.MobileBlock {
+  display: flex;
+  justify-content: space-around;
+  width: 95vw;
+  height: 100vh;
+}
+
+.MColOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.MColTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.mobileSpacer {
+  height: 10%;
+  width: 50%;
+}
+
+.mobileSpacerB {
+  width: 50%;
+}
+/* .MColOne div {
+  height: 50%;
+  background-color: purple;
+}
+.MColTwo div {
+  height: 50%;
+  background-color: purple;
+} */

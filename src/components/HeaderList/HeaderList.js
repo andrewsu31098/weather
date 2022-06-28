@@ -14,23 +14,24 @@ function HeaderList(props) {
 
   return (
     <div className="HeaderList">
-      <div className="H-Spacer"></div>
+      {props.mobileView ? null : <div className="H-Spacer"></div>}
 
       <div className="H-Today">
-        <span className="h-day">
-          {date.toLocaleString("default", {
-            weekday: "long",
-            timeZone: "America/Los_Angeles",
-          })}
-        </span>
-        <span className="h-day"> {date.getDate()} </span>
-        <span className="h-day">
-          {date.toLocaleString("default", {
-            month: "long",
-            timeZone: "America/Los_Angeles",
-          })}
-        </span>{" "}
-        <br></br>
+        <div>
+          <span className="h-day">
+            {date.toLocaleString("default", {
+              weekday: "long",
+              timeZone: "America/Los_Angeles",
+            })}
+          </span>
+          <span className="h-day"> {date.getDate()} </span>
+          <span className="h-day">
+            {date.toLocaleString("default", {
+              month: "long",
+              timeZone: "America/Los_Angeles",
+            })}
+          </span>
+        </div>
         <p id="h-temperature">+{parseInt(props.current.temp)}°F</p>
         <p id="h-description">
           Feels like {parseInt(props.current.feels_like)}°F

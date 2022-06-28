@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 
 import Navvy from "./components/Navbar/Nav";
 import WeatherBlock from "./components/WeatherBlock/WeatherBlock.js";
+import MobileBlock from "./mobilecomponents/MobileBlock/MobileBlock";
 
 import { API, JS } from "aws-amplify";
+import { useMediaQuery } from "react-responsive";
 
 const londonDefault = require("./assets/newyork.json");
 
@@ -31,10 +33,16 @@ function App() {
     findNewWeather();
   }, []);
 
+  const isMobileScreen = useMediaQuery({ query: "(max-width: 900px)" });
+
   return (
     <div id="weather">
       <Navvy onCitySearch={onCitySearch} />
-      <WeatherBlock weatherState={weatherState} />
+      {isMobileScreen ? (
+        <MobileBlock weatherState={weatherState} />
+      ) : (
+        <WeatherBlock weatherState={weatherState} />
+      )}
     </div>
   );
 }

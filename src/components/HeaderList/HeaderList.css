@@ -79,3 +79,131 @@
   font-size: 12px;
   font-weight: 1000;
 }
+
+@media (max-width: 900px) {
+  .HeaderList {
+    height: 30%;
+    width: auto;
+    margin-left: 12%;
+    margin-right: 0;
+    min-width: 300px;
+    min-height: 181px;
+  }
+
+  .H-Today {
+    min-width: 100px;
+    padding-top: 20px;
+    transition: padding-top 0.5s, border-bottom 0.5s;
+  }
+
+  .H-Details {
+    padding-top: 20px;
+    min-width: 50px;
+    transition: padding-top 0.5s, border-bottom 0.5s;
+  }
+
+  .h-day {
+    color: white;
+    font-weight: 550;
+  }
+
+  #h-temperature {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff689;
+    margin: 0;
+  }
+  #h-description {
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+  }
+  #h-description-2 {
+    font-size: 0.7rem;
+    color: white;
+    margin: 0;
+  }
+
+  #h-detail-header {
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 0;
+  }
+  .h-label {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 200;
+  }
+  .h-detail {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 1000;
+  }
+}
+
+@media (max-width: 750px) {
+  .HeaderList {
+    height: 30%;
+    width: auto;
+    margin-left: 12%;
+    margin-right: 0;
+    min-width: 140px;
+    min-height: 181px;
+  }
+
+  .H-Today {
+    min-width: 50px;
+    padding-top: 5px;
+    transition: padding-top 0.5s, border-bottom 0.5s;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .H-Details {
+    padding-top: 5px;
+    min-width: 50px;
+    transition: padding-top 0.5s, border-bottom 0.5s;
+  }
+
+  .h-day {
+    color: white;
+    font-weight: 550;
+    font-size: 0.5rem;
+  }
+
+  #h-temperature {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff689;
+    margin: 0;
+  }
+  #h-description {
+    color: white;
+    margin: 0;
+    font-size: 0.5rem;
+  }
+  #h-description-2 {
+    font-size: 0.35rem;
+    color: white;
+    margin: 0;
+  }
+
+  #h-detail-header {
+    color: white;
+    font-size: 0.65rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .h-label {
+    color: white;
+    font-size: 0.4rem;
+    font-weight: 200;
+  }
+  .h-detail {
+    color: white;
+    font-size: 0.3rem;
+    font-weight: 1000;
+  }
+}

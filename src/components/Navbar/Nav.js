@@ -3,11 +3,13 @@ import "./Nav.css";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { useState, useEffect } from "react";
 import { type } from "@testing-library/user-event/dist/type";
+import { useMediaQuery } from "react-responsive";
 
 function Navvy(props) {
   const [cityJSON, setCityJSON] = useState([]);
   const [searchCity, setSearchCity] = useState("");
 
+  const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
   useEffect(() => {
     fetch("./cities.json")
       .then((r) => r.text())
@@ -49,29 +51,48 @@ function Navvy(props) {
         >
           MINIMAL WEATHER
         </ReactBootStrap.Navbar.Brand>
-        <ReactBootStrap.Nav.Link
-          href="https://github.com/andrewsu31098/weather/blob/master/README.md"
-          className="navvy-links"
-        >
-          WEBSITE-FEATURES
-        </ReactBootStrap.Nav.Link>
-        <ReactBootStrap.Nav.Link
-          href="https://github.com/andrewsu31098"
-          className="navvy-links"
-        >
-          MY-GITHUB
-        </ReactBootStrap.Nav.Link>
+        {!isMobile && (
+          <ReactBootStrap.Nav.Link
+            href="https://github.com/andrewsu31098/weather/blob/master/README.md"
+            className="navvy-links"
+          >
+            WEBSITE-FEATURES
+          </ReactBootStrap.Nav.Link>
+        )}
+        {!isMobile && (
+          <ReactBootStrap.Nav.Link
+            href="https://github.com/andrewsu31098"
+            className="navvy-links"
+          >
+            MY-GITHUB
+          </ReactBootStrap.Nav.Link>
+        )}
+
         <div id="navvy-auto-searchbar">
           <form onSubmit={onSubmitCity}>
-            <ReactSearchAutocomplete
-              onSearch={onSearchChange}
-              onSelect={onSearchSelect}
-              items={cityJSON}
-              fuseOptions={{ keys: ["city"] }}
-              resultStringKeyName="city"
-              autoFocus
-              placeholder="Search City"
-            />
+            {isMobile ? (
+              <ReactSearchAutocomplete
+                onSearch={onSearchChange}
+                onSelect={onSearchSelect}
+                items={cityJSON}
+                fuseOptions={{ keys: ["city"] }}
+                resultStringKeyName="city"
+                autoFocus
+                placeholder="Search City"
+                styling={{ fontSize: "10px" }}
+                showIcon={false}
+              />
+            ) : (
+              <ReactSearchAutocomplete
+                onSearch={onSearchChange}
+                onSelect={onSearchSelect}
+                items={cityJSON}
+                fuseOptions={{ keys: ["city"] }}
+                resultStringKeyName="city"
+                autoFocus
+                placeholder="Search City"
+              />
+            )}
           </form>
         </div>
       </ReactBootStrap.Container>
