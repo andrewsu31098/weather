@@ -1,5 +1,7 @@
 # Main Features of Minimal Weather.
 
+### Live link.
+https://master.d1k9bzcmklniqx.amplifyapp.com/
 
 ## Changing Background Image.
 - The background image changes to match the current weather in whichever city is being observed.
