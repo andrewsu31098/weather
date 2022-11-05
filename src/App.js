@@ -14,9 +14,13 @@ function App() {
   const [weatherState, setWeatherState] = useState(londonDefault);
 
   useEffect(() => {
-    console.log("First body class: ", document.body.classList[0]);
-    document.body.classList.remove(document.body.classList[0]);
-    document.body.classList.add(weatherState.current.weather[0].main);
+    if (isMobileScreen) {
+      document.body.classList.remove(document.body.classList[0]);
+      document.body.classList.add("None");
+    } else {
+      document.body.classList.remove(document.body.classList[0]);
+      document.body.classList.add(weatherState.current.weather[0].main);
+    }
   });
 
   async function findNewWeather() {

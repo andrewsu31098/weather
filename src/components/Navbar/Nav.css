@@ -39,6 +39,15 @@
   }
 }
 
+@media (max-width: 900px) {
+  .bootstrap-navbar {
+    background-color: #1c1c1c;
+  }
+  body {
+    background-image: url("../../assets/background-blank.PNG");
+  }
+}
+
 @media (max-width: 700px) {
   #navvy {
     min-width: 400px;

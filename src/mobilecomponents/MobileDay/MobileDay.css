@@ -75,7 +75,7 @@
     transition: border-top 0.5s, padding-top 0.5s;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 0;
   }
 
@@ -103,59 +103,6 @@
   #icon2 {
     height: 50px;
     width: 50px;
-    object-fit: scale-down;
-  }
-}
-
-@media (max-width: 750px) {
-  .MobileDay {
-    border: 2px solid rgba(255, 255, 255, 0);
-    border-top: 4px solid rgba(255, 255, 255, 0);
-    flex: 1;
-    padding-top: 0.5em;
-    transition: border-top 0.5s, padding-top 0.5s;
-
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 0;
-  }
-
-  .MobileDay div:nth-child(1) {
-    min-width: 50px;
-  }
-  .MobileDay div:nth-child(2) {
-    min-width: 40px;
-  }
-
-  #day-name {
-    color: white;
-    margin-bottom: 0;
-    font-size: 0.4em;
-    transition: font-size 0.5s;
-  }
-
-  #date {
-    margin-bottom: 0;
-    font-size: 0.4em;
-  }
-  #weather-high {
-    color: white;
-    margin-bottom: 0;
-    white-space: nowrap;
-    font-size: 0.4em;
-    transition: font-size 0.5s;
-  }
-  #weather-low {
-    margin-bottom: 0;
-    font-size: 0.4em;
-  }
-  #description {
-    font-size: 0.4em;
-  }
-
-  #icon2 {
-    height: 30px;
-    width: 30px;
     object-fit: scale-down;
   }
 }

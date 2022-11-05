@@ -1,37 +1,21 @@
 .MobileBlock {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: start;
   width: 95vw;
   height: 100vh;
+  background-color: #1c1c1c;
 }
 
 .MColOne {
+  margin-top: 40px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 50%;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .MColTwo {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
 }
-
-.mobileSpacer {
-  height: 10%;
-  width: 50%;
-}
-
-.mobileSpacerB {
-  width: 50%;
-}
-/* .MColOne div {
-  height: 50%;
-  background-color: purple;
-}
-.MColTwo div {
-  height: 50%;
-  background-color: purple;
-} */

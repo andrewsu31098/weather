@@ -42,7 +42,7 @@ function Navvy(props) {
   }
 
   return (
-    <ReactBootStrap.Navbar>
+    <ReactBootStrap.Navbar className="bootstrap-navbar">
       <ReactBootStrap.Container id="navvy">
         <ReactBootStrap.Navbar.Brand
           href="#home"
