@@ -23,6 +23,7 @@ body {
 .Clear {
   background-image: url("./assets/m-sunny-1.png");
 }
+.Cloud,
 .Clouds {
   background-image: url("./assets/m-cloudy-1.png");
 }
