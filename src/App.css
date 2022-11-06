@@ -7,7 +7,9 @@ body {
   background-repeat: round;
   min-height: 100vh;
 }
-
+.None {
+  background-image: url("./assets/background-blank.png");
+}
 .Thunderstorm {
   background-image: url("./assets/m-rainy-1.png");
 }

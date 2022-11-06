@@ -44,7 +44,7 @@
     background-color: #1c1c1c;
   }
   body {
-    background-image: url("../../assets/background-blank.PNG");
+    background-image: url("../../assets/background-blank.png") !important;
   }
 }
 

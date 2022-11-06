@@ -5,7 +5,7 @@ import Navvy from "./components/Navbar/Nav";
 import WeatherBlock from "./components/WeatherBlock/WeatherBlock.js";
 import MobileBlock from "./mobilecomponents/MobileBlock/MobileBlock";
 
-import { API, JS } from "aws-amplify";
+import { API } from "aws-amplify";
 import { useMediaQuery } from "react-responsive";
 
 const londonDefault = require("./assets/newyork.json");
@@ -14,7 +14,6 @@ function App() {
   const [weatherState, setWeatherState] = useState(londonDefault);
 
   useEffect(() => {
-    console.log(document.body.classList);
     document.body.classList.remove(document.body.classList[0]);
     document.body.classList.add(weatherState.current.weather[0].main);
   });
