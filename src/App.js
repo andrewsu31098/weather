@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     document.body.classList.remove(document.body.classList[0]);
     document.body.classList.add(weatherState.current.weather[0].main);
-  });
+  }, [weatherState]);
 
   async function findNewWeather() {
     const weatherData = await API.get("weatherApi", "/weather?city=New York");

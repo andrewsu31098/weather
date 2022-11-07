@@ -6,6 +6,7 @@ body {
   background-size: 100vw 100vh;
   background-repeat: round;
   min-height: 100vh;
+  background-color: #1c1c1c !important;
 }
 .None {
   background-image: url("./assets/background-blank.png");
